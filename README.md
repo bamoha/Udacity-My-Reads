@@ -5,7 +5,7 @@
 ### Getting Started
 ##### Setup
 
-<code>$git clone https://github.com/anoopmundathan/reactnd-myreads.git
+<code>$git clone https://github.com/bamoha/Udacity-My-Reads
 $cd reactnd-myreads</code>
 
 ##### Install
