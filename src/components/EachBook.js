@@ -22,7 +22,7 @@ class EachBook extends Component {
                     <div className="book-shelf-changer">
                         <select 
                             onChange={e => onShelfChange(book, e.target.value)}
-                            value={book.shelf ? book.shelf : ''}>
+                            value={book.shelf ? book.shelf : 'None'}>
                             <option value="none" disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>
                             <option value="wantToRead">Want to Read</option>
