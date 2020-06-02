@@ -60,15 +60,9 @@ class BookSearch extends Component {
     let booksList
 
     if (books.length > 0) {
+      const currentIds = currentBooks.map(book => book.id)
       booksList = books.map((book, index) => {
-        currentBooks.forEach(curent => {
-          if (curent.id === book.id) {
-            book.shelf = curent.shelf
-          } else {
-            book.shelf = 'None';
-          }
-        })
-
+        if (currentIds.includes(book.id)) book.shelf = currentBooks[index].shelf
         return (
           <li key={index}>
             <EachBook
@@ -92,12 +86,12 @@ class BookSearch extends Component {
               placeholder="Search by title or author" />
           </div>
         </div>
-        {this.state.notFound && <div className="search-books-results">
+        {!this.state.notFound && <div className="search-books-results">
           <ol className="books-grid">
             {booksList}
           </ol>
         </div>}
-        {!this.state.notFound && <div className="search-books-results">
+        {this.state.notFound && <div className="search-books-results">
           <ol className="books-grid">
             Not Found
               </ol>
