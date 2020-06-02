@@ -6,7 +6,7 @@
 ##### Setup
 
 <code>$git clone https://github.com/bamoha/Udacity-My-Reads
-$cd reactnd-myreads</code>
+$cd Udacity-My-Reads</code>
 
 ##### Install
 <code>$npm install</code>
